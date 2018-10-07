@@ -48,6 +48,13 @@ public final class ClassUtil {
     }
 
     /**
+     * 加载类（默认初始化）
+     */
+    public static  Class<?> loadClass(String className){
+        return loadClass(className, true);
+    }
+
+    /**
      * 获取指定包下的所有类
      */
 
@@ -84,10 +91,11 @@ public final class ClassUtil {
                 }
             }
         } catch (Exception e){
-
+            LOGGER.error("get class set failure", e);
+            throw new RuntimeException(e);
         }
 
-        return null;
+        return classSet;
     }
 
     private static void addClass(Set<Class<?>> classSet, String packagePath, String packageName){

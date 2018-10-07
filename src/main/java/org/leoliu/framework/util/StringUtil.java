@@ -5,7 +5,7 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * 字符串工具类
  */
-class StringUtil {
+public final class StringUtil {
 
     /**
      * 判断字符串是否为空
@@ -26,5 +26,12 @@ class StringUtil {
      */
     public static boolean isNotEmpty(String str){
         return !isEmpty(str);
+    }
+
+    /**
+     * 分割固定格式的字符串
+     */
+    public static String[] splitString(String str, String separator) {
+        return StringUtils.splitByWholeSeparator(str, separator);
     }
 }

@@ -3,7 +3,7 @@ package org.leoliu.framework.util;
 /**
  * 转型操作工具类
  */
-public class CastUtil {
+public final class CastUtil {
 
 
     public static String castString(Object obj){

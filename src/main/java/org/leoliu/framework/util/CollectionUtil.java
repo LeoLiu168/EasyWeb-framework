@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * 集合工具类
  */
-public class CollectionUtil {
+public final class CollectionUtil {
 
     public static boolean isEmpty(Collection<?> collection){
         return CollectionUtils.isEmpty(collection);

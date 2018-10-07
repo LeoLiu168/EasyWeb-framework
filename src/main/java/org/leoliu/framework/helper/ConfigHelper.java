@@ -8,7 +8,7 @@ import java.util.Properties;
 /**
  * 获取框架配置文件的Helper类
  */
-public class ConfigHelper {
+public final class ConfigHelper {
 
     private static final Properties CONFIG_PROPS = PropsUtil.loadProps(ConfigConstant.CONFIG_FILE);
 
